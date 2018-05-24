@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>一键安装平台</title>
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/commons.css' %}">
+</head>
+<body>
+    <div class="pg-header">
+        {% include 'inc/header.html' %}
+    </div>
+    <div class="pg-body">
+        <div class="body-menu">
+            {% include 'inc/menu.html' %}
+        </div><!-- body-menu -->
+        <div class="body-content">
+            {% block content %}{% endblock %}
+        </div><!-- body-content -->
+    </div>
+    <div class="pg-footer">
+        {% include 'inc/footer.html' %}
+    </div>
+</body>
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'plugins/bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/commons.js' %}"></script>
+</html>
